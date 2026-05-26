@@ -1,0 +1,60 @@
+/* src/styles/light.css */
+.light {
+  /* Background Colors */
+  --bg-primary: #f8fafc;
+  --bg-secondary: #ffffff;
+  --bg-tertiary: #f1f5f9;
+  
+  /* Text Colors */
+  --text-primary: #0f172a;
+  --text-secondary: #475569;
+  --text-tertiary: #94a3b8;
+  
+  /* Border Colors */
+  --border-primary: rgba(0, 0, 0, 0.1);
+  --border-secondary: rgba(0, 0, 0, 0.05);
+  
+  /* Card Backgrounds */
+  --card-bg: rgba(255, 255, 255, 0.8);
+  --card-bg-hover: rgba(255, 255, 255, 0.9);
+  
+  /* Input Backgrounds */
+  --input-bg: rgba(0, 0, 0, 0.02);
+  --input-bg-focus: rgba(0, 0, 0, 0.04);
+  
+  /* Gradient Colors */
+  --gradient-start: #7c3aed;
+  --gradient-end: #2563eb;
+  
+  /* Status Colors */
+  --success: #059669;
+  --warning: #d97706;
+  --danger: #dc2626;
+  --info: #2563eb;
+}
+
+.light body {
+  background: var(--bg-primary);
+  color: var(--text-primary);
+}
+
+.light .card {
+  background: var(--card-bg);
+  border-color: var(--border-primary);
+}
+
+.light .input {
+  background: var(--input-bg);
+  border-color: var(--border-primary);
+  color: var(--text-primary);
+}
+
+.light .input:focus {
+  background: var(--input-bg-focus);
+  border-color: var(--gradient-start);
+}
+
+.light .glass-card {
+  background: rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(12px);
+}

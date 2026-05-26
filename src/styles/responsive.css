@@ -1,0 +1,122 @@
+/* src/styles/responsive.css */
+/* Mobile Devices (max-width: 640px) */
+@media (max-width: 640px) {
+  .container {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+  
+  h1 {
+    font-size: 1.5rem;
+  }
+  
+  h2 {
+    font-size: 1.25rem;
+  }
+  
+  .card {
+    padding: 1rem;
+  }
+  
+  .grid-cols-responsive {
+    grid-template-columns: 1fr;
+  }
+  
+  .hide-on-mobile {
+    display: none;
+  }
+  
+  .show-on-mobile {
+    display: block;
+  }
+  
+  .sidebar-collapsed {
+    width: 0;
+    overflow: hidden;
+  }
+}
+
+/* Tablet Devices (min-width: 641px) and (max-width: 1024px) */
+@media (min-width: 641px) and (max-width: 1024px) {
+  .container {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+  
+  .grid-cols-responsive {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .hide-on-tablet {
+    display: none;
+  }
+  
+  .show-on-tablet {
+    display: block;
+  }
+}
+
+/* Desktop Devices (min-width: 1025px) */
+@media (min-width: 1025px) {
+  .container {
+    padding-left: 2rem;
+    padding-right: 2rem;
+    max-width: 1280px;
+    margin: 0 auto;
+  }
+  
+  .grid-cols-responsive {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  
+  .hide-on-desktop {
+    display: none;
+  }
+  
+  .show-on-desktop {
+    display: block;
+  }
+}
+
+/* Large Desktop Devices (min-width: 1536px) */
+@media (min-width: 1536px) {
+  .container {
+    max-width: 1536px;
+  }
+  
+  .grid-cols-responsive {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+/* Touch Devices */
+@media (hover: none) and (pointer: coarse) {
+  .hover-lift:hover,
+  .hover-grow:hover,
+  .hover-shrink:hover {
+    transform: none;
+  }
+  
+  button, 
+  .clickable {
+    min-height: 44px;
+    min-width: 44px;
+  }
+}
+
+/* Print Styles */
+@media print {
+  .no-print {
+    display: none;
+  }
+  
+  body {
+    background: white;
+    color: black;
+  }
+  
+  .card {
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+}

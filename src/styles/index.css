@@ -1,0 +1,9 @@
+/* src/styles/index.css */
+@import './global.css';
+@import './dark.css';
+@import './light.css';
+@import './animations.css';
+@import './responsive.css';
+@import './components.css';
+
+/* Tailwind directives are already in global.css */

@@ -1,0 +1,316 @@
+/* src/App.css */
+
+/* App Container */
+.app-container {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #020617 0%, #0f172a 100%);
+  color: #ffffff;
+}
+
+/* Counter Styles (Enhanced for TaskMaster) */
+.counter {
+  font-size: 1rem;
+  padding: 0.625rem 1.25rem;
+  border-radius: 0.75rem;
+  color: #8b5cf6;
+  background: rgba(139, 92, 246, 0.1);
+  border: 2px solid transparent;
+  transition: all 0.3s ease;
+  margin-bottom: 1.5rem;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.counter:hover {
+  border-color: rgba(139, 92, 246, 0.5);
+  background: rgba(139, 92, 246, 0.15);
+  transform: translateY(-2px);
+}
+
+.counter:focus-visible {
+  outline: 2px solid #8b5cf6;
+  outline-offset: 2px;
+}
+
+/* Hero Section */
+.hero {
+  position: relative;
+  min-height: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, rgba(139, 92, 246, 0.1), rgba(59, 130, 246, 0.1));
+  border-radius: 1.5rem;
+  margin: 2rem;
+  overflow: hidden;
+}
+
+.hero .base,
+.hero .framework,
+.hero .vite {
+  inset-inline: 0;
+  margin: 0 auto;
+}
+
+.hero .base {
+  width: 170px;
+  position: relative;
+  z-index: 0;
+}
+
+.hero .framework {
+  z-index: 1;
+  top: 34px;
+  height: 28px;
+  transform: perspective(2000px) rotateZ(300deg) rotateX(44deg) rotateY(39deg) scale(1.4);
+}
+
+.hero .vite {
+  z-index: 0;
+  top: 107px;
+  height: 26px;
+  width: auto;
+  transform: perspective(2000px) rotateZ(300deg) rotateX(40deg) rotateY(39deg) scale(0.8);
+}
+
+/* Center Section */
+#center {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  place-content: center;
+  place-items: center;
+  flex-grow: 1;
+  padding: 2rem;
+}
+
+@media (max-width: 1024px) {
+  #center {
+    padding: 2rem 1.25rem 1.5rem;
+    gap: 1.125rem;
+  }
+}
+
+/* Next Steps Section */
+#next-steps {
+  display: flex;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  text-align: left;
+  background: rgba(255, 255, 255, 0.02);
+  border-radius: 1rem;
+  margin: 2rem;
+  overflow: hidden;
+}
+
+#next-steps > div {
+  flex: 1 1 0;
+  padding: 2rem;
+  transition: all 0.3s ease;
+}
+
+#next-steps > div:hover {
+  background: rgba(255, 255, 255, 0.05);
+}
+
+@media (max-width: 1024px) {
+  #next-steps > div {
+    padding: 1.5rem 1.25rem;
+  }
+}
+
+#next-steps .icon {
+  margin-bottom: 1rem;
+  width: 1.375rem;
+  height: 1.375rem;
+  color: #8b5cf6;
+}
+
+@media (max-width: 1024px) {
+  #next-steps {
+    flex-direction: column;
+    text-align: center;
+    margin: 1rem;
+  }
+  
+  #next-steps .icon {
+    margin: 0 auto 1rem;
+  }
+}
+
+/* Documentation Section */
+#docs {
+  border-right: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+@media (max-width: 1024px) {
+  #docs {
+    border-right: none;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  }
+}
+
+/* Next Steps List */
+#next-steps ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  gap: 0.5rem;
+  margin: 2rem 0 0;
+  flex-wrap: wrap;
+}
+
+#next-steps ul .logo {
+  height: 1.125rem;
+  width: auto;
+}
+
+#next-steps ul a {
+  color: #ffffff;
+  font-size: 0.875rem;
+  border-radius: 0.5rem;
+  background: rgba(255, 255, 255, 0.08);
+  display: inline-flex;
+  padding: 0.5rem 1rem;
+  align-items: center;
+  gap: 0.5rem;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+#next-steps ul a:hover {
+  background: rgba(139, 92, 246, 0.2);
+  border-color: rgba(139, 92, 246, 0.5);
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px -5px rgba(0, 0, 0, 0.2);
+}
+
+#next-steps ul a .button-icon {
+  height: 1.125rem;
+  width: 1.125rem;
+}
+
+@media (max-width: 1024px) {
+  #next-steps ul {
+    margin-top: 1.25rem;
+    justify-content: center;
+  }
+  
+  #next-steps ul li {
+    flex: 1 1 calc(50% - 0.5rem);
+    min-width: 120px;
+  }
+  
+  #next-steps ul a {
+    width: 100%;
+    justify-content: center;
+    box-sizing: border-box;
+  }
+}
+
+/* Spacer */
+#spacer {
+  height: 5.5rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+@media (max-width: 1024px) {
+  #spacer {
+    height: 3rem;
+  }
+}
+
+/* Ticks Component */
+.ticks {
+  position: relative;
+  width: 100%;
+  padding: 0.5rem 0;
+}
+
+.ticks::before,
+.ticks::after {
+  content: '';
+  position: absolute;
+  top: -0.25rem;
+  border: 0.3125rem solid transparent;
+}
+
+.ticks::before {
+  left: 0;
+  border-left-color: rgba(255, 255, 255, 0.1);
+}
+
+.ticks::after {
+  right: 0;
+  border-right-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Additional TaskMaster Specific Styles */
+.gradient-text {
+  background: linear-gradient(135deg, #8b5cf6, #3b82f6);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.glass-card {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 1rem;
+  transition: all 0.3s ease;
+}
+
+.glass-card:hover {
+  background: rgba(255, 255, 255, 0.08);
+  transform: translateY(-4px);
+  box-shadow: 0 20px 40px -12px rgba(0, 0, 0, 0.3);
+}
+
+/* Loading Animation */
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+
+.loading-pulse {
+  animation: pulse 1.5s ease-in-out infinite;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 640px) {
+  .hero {
+    margin: 1rem;
+    min-height: 300px;
+  }
+  
+  .counter {
+    font-size: 0.875rem;
+    padding: 0.5rem 1rem;
+  }
+}
+
+/* Dark Mode Support */
+@media (prefers-color-scheme: dark) {
+  .glass-card {
+    background: rgba(0, 0, 0, 0.3);
+  }
+}
+
+/* Print Styles */
+@media print {
+  .app-container {
+    background: white;
+    color: black;
+  }
+  
+  .glass-card {
+    background: white;
+    border: 1px solid #ddd;
+    box-shadow: none;
+  }
+}
